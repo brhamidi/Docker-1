@@ -1,0 +1,1 @@
+docker run --name Abathur -p 3000:3000 --mount type=bind,source="$HOME/flask_app",target=/root -w="/root" -e FLASK_APP=hello.py python:2.7-slim /bin/bash -c "pip install Flask; flask run --port=3000 --host=0.0.0.0"
