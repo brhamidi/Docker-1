@@ -23,4 +23,4 @@ COPY script.sh .
 
 expose 443 22
 
-# ENTRYPOINT ["bash", "script.sh"]
+ENTRYPOINT ["bash", "script.sh"]

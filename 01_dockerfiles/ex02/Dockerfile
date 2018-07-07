@@ -20,8 +20,8 @@ ONBUILD COPY Gemfile Gemfile.lock ./
 ONBUILD RUN bundle install
 ONBUILD COPY . ./
 
-ONBUILD RUN rake db:setup
-ONBUILD RUN rake db:migrate
+ONBUILD RUN bundle exec rake db:setup
+ONBUILD RUN bundle exec rake db:migrate
 
 ENV PATH=${PATH}:/opt/app/bin
 
